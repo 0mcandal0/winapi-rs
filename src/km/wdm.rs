@@ -797,6 +797,13 @@ extern "system" {
     pub fn DbgBreakPointWithStatus(Status: NTSTATUS);
 }
 
+extern "system" {
+    pub fn RtlInitUnicodeString(
+        DestinationString: PUNICODE_STRING,
+        SourceString: PCWSTR 
+    );
+}
+
 //access right
 pub const FILE_READ_DATA: u32 = 1;
 pub const FILE_LIST_DIRECTORY: u32 = 1;
